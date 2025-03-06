@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oumarou Gouba - Information Science and Technology Major | Systems Operations Engineer</title>
+    <meta name="description" content="Portfolio of Oumarou Gouba, Information Science & Technology student at OU and Systems Operations Engineer at OGE Energy Corp.">
+    <!-- Improved fonts with fallbacks -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Updated Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS path -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0A192F">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">OG</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="pages/projects.html">Projects</a></li>
+                <li><a href="pages/courses.html">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">Oumarou Gouba</span></h1>
+                <h2>Information Science & Technology Student</h2>
+                <p>Junior at The University of Oklahoma with a passion for web development, data analytics, and machine learning.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary-btn">Get In Touch</a>
+                    <a href="pages/projects.html" class="btn secondary-btn">View My Work</a>
+                </div>
+            </div>
+            <div class="profile-picture">
+                <img src="images/oumarou.jpg" alt="Oumarou Gouba">
+            </div>
+        </section>
+
+        <section id="about" class="animate-on-scroll">
+            <h2>About Me</h2>
+            <p>I'm currently working as a Systems Operations Engineer at OGE Energy Corp while pursuing my degree. My focus is on creating intuitive web applications and leveraging data to solve real-world problems.</p>
+            <a href="pages/about.html" class="btn-learn-more">Learn More About Me</a>
+        </section>
+
+        <section id="skills" class="animate-on-scroll">
+            <h2>Skills & Expertise</h2>
+            <div class="skill-category" data-category="technical-skills">
+                <h3>Technical Skills <i class="fas fa-chevron-down"></i></h3>
+                <ul class="skill-list">
+                    <li><i class="fab fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li><i class="fab fa-js-square"></i> JavaScript</li>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fas fa-database"></i> SQL</li>
+                    <li><i class="fas fa-registered"></i> R Programming</li>
+                </ul>
+            </div>
+            <div class="skill-category" data-category="soft-skills">
+                <h3>Soft Skills <i class="fas fa-chevron-down"></i></h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-comments"></i> Communication</li>
+                    <li><i class="fas fa-puzzle-piece"></i> Problem Solving</li>
+                    <li><i class="far fa-clock"></i> Time Management</li>
+                    <li><i class="fas fa-users"></i> Teamwork</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="featured-projects" class="animate-on-scroll">
+            <h2>Featured Projects</h2>
+            <div class="featured-projects-container">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/visa-scoring-model.svg" alt="Visa Scoring Model">
+                        <div class="project-overlay">
+                            <a href="pages/projects.html#work-projects" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Visa Scoring Model for inTulsa</h3>
+                        <p>Developed a visa scoring model using data analytics and machine learning to improve inTulsa's talent selection process, implementing various statistical models including Random Forest and Logistic Regression.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mva-calculator.svg" alt="Visa Scoring Model">
+                        <div class="project-overlay">
+                            <a href="pages/projects.html#work-projects" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MVA Calculator in PowerApps</h3>
+                        <p>Recreated a Megavolt-Ampere (MVA) calculator using Microsoft PowerApps, now actively used by field operators at OGE Energy Corp for power distribution calculations.</p>
+                        <div class="project-tags">
+                            <span>PowerApps</span>
+                            <span>Microsoft Power Platform</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="pages/projects.html" class="btn-view-all">View All Projects</a>
+        </section>
+
+        <section id="contact" class="animate-on-scroll">
+            <h2>Get in Touch</h2>
+            <button class="toggle-button" id="contact-toggle">Show Contact Form</button>
+            <div id="contact-form-container" class="hidden">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Oumarou Gouba. All rights reserved.</p>
+                <p>Information Science and Technology Major at The University of Oklahoma</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/oumarou-g-a1030726a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/OumarouatOU" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/OumarouGouba6" target="_blank" aria-label="X"><i class="fab fa-x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS path -->
+    <script src="js/script.js"></script>
+</body>
+</html>
