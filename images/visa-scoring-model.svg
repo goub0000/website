@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f" stop-opacity="1" />
+      <stop offset="100%" stop-color="#112240" stop-opacity="1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="3" dy="3" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)" />
+  
+  <!-- Abstract data visualization elements -->
+  <g transform="translate(400, 250)">
+    <!-- Decision tree -->
+    <path d="M0,-150 L-150,-50 L-200,50 L-150,150 M-150,-50 L-100,50 L-50,150 M0,-150 L150,-50 L200,50 L150,150 M150,-50 L100,50 L50,150" 
+          stroke="#64ffda" stroke-width="3" fill="none" opacity="0.5"/>
+    
+    <!-- Data points - Green (approved) -->
+    <circle cx="-120" cy="-70" r="5" fill="#64ffda" />
+    <circle cx="-180" cy="20" r="5" fill="#64ffda" />
+    <circle cx="-90" cy="80" r="5" fill="#64ffda" />
+    <circle cx="-170" cy="120" r="5" fill="#64ffda" />
+    <circle cx="-70" cy="130" r="5" fill="#64ffda" />
+    
+    <!-- Data points - Red (rejected) -->
+    <circle cx="120" cy="-70" r="5" fill="#ff6b6b" />
+    <circle cx="180" cy="20" r="5" fill="#ff6b6b" />
+    <circle cx="90" cy="80" r="5" fill="#ff6b6b" />
+    <circle cx="170" cy="120" r="5" fill="#ff6b6b" />
+    <circle cx="70" cy="130" r="5" fill="#ff6b6b" />
+    
+    <!-- ML Model Box -->
+    <rect x="-100" y="-30" width="200" height="60" rx="10" ry="10" fill="#233554" stroke="#64ffda" stroke-width="2" />
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-family="Arial" font-size="18">Machine Learning Model</text>
+    <text x="0" y="25" text-anchor="middle" dominant-baseline="middle" fill="#64ffda" font-family="Arial" font-size="14">Random Forest | Logistic Regression</text>
+    
+    <!-- Input and Output lines -->
+    <line x1="-180" y1="-90" x2="-100" y2="-30" stroke="#64ffda" stroke-width="2" stroke-dasharray="5,5" />
+    <line x1="180" y1="-90" x2="100" y2="-30" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5" />
+    <line x1="-100" y1="30" x2="-180" y2="90" stroke="#64ffda" stroke-width="2" />
+    <line x1="100" y1="30" x2="180" y2="90" stroke="#ff6b6b" stroke-width="2" />
+    
+    <!-- Top Analytics elements -->
+    <g transform="translate(0, -100)" filter="url(#shadow)">
+      <rect x="-250" y="-40" width="500" height="40" rx="5" ry="5" fill="#1e3a8a" />
+      <rect x="-250" y="-40" width="320" height="40" rx="5" ry="5" fill="#2563eb" />
+      <text x="-230" y="-15" fill="white" font-family="Arial" font-size="16">Visa Approval Prediction Model</text>
+      <text x="180" y="-15" fill="white" font-family="Arial" font-size="16">87%</text>
+    </g>
+    
+    <!-- Document icon -->
+    <g transform="translate(-200, -150)" filter="url(#shadow)">
+      <rect x="-30" y="-40" width="60" height="80" rx="3" ry="3" fill="#f0f9ff" />
+      <rect x="-20" y="-30" width="40" height="5" rx="1" ry="1" fill="#93c5fd" />
+      <rect x="-20" y="-20" width="40" height="5" rx="1" ry="1" fill="#93c5fd" />
+      <rect x="-20" y="-10" width="30" height="5" rx="1" ry="1" fill="#93c5fd" />
+      <rect x="-20" y="0" width="40" height="5" rx="1" ry="1" fill="#93c5fd" />
+      <rect x="-20" y="10" width="20" height="5" rx="1" ry="1" fill="#93c5fd" />
+      <rect x="-20" y="20" width="40" height="5" rx="1" ry="1" fill="#93c5fd" />
+    </g>
+    
+    <!-- Chart Icons -->
+    <g transform="translate(200, -150)" filter="url(#shadow)">
+      <rect x="-30" y="-40" width="60" height="80" rx="3" ry="3" fill="#f0f9ff" />
+      <rect x="-20" y="20" width="10" height="15" fill="#3b82f6" />
+      <rect x="-5" y="5" width="10" height="30" fill="#3b82f6" />
+      <rect x="10" y="-10" width="10" height="45" fill="#3b82f6" />
+      <path d="M-20,0 L-10,10 L0,-5 L10,-15 L20,5" stroke="#ef4444" stroke-width="2" fill="none" />
+    </g>
+  </g>
+  
+  <!-- Bottom Data Visualization -->
+  <g transform="translate(400, 400)">
+    <path d="M-250,0 C-200,-40 -150,-10 -100,-30 C-50,-50 0,-10 50,-30 C100,-50 150,-10 200,-30 C250,-50 300,-10 330,0" 
+          stroke="#64ffda" stroke-width="3" fill="none" />
+    <path d="M-250,0 C-200,30 -150,10 -100,40 C-50,60 0,10 50,40 C100,60 150,20 200,50 C250,70 300,30 330,0" 
+          stroke="#ff6b6b" stroke-width="3" fill="none" />
+          
+    <!-- X-axis -->
+    <line x1="-250" y1="0" x2="330" y2="0" stroke="#ffffff" stroke-width="1" />
+    
+    <!-- Axis labels -->
+    <text x="0" y="60" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="14">Feature Importance</text>
+  </g>
+  
+  <!-- Logo Elements -->
+  <g transform="translate(85, 85)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="60" fill="#ffffff" opacity="0.1" />
+    <path d="M-30,-30 L30,30 M-30,30 L30,-30" stroke="#64ffda" stroke-width="4" />
+    <circle cx="0" cy="0" r="15" fill="#64ffda" />
+  </g>
+  
+  <!-- Decorative code snippets -->
+  <g transform="translate(700, 85)" opacity="0.7">
+    <rect x="-80" y="-40" width="160" height="80" rx="5" ry="5" fill="#233554" />
+    <text x="-70" y="-20" fill="#64ffda" font-family="Consolas, monospace" font-size="10">from sklearn.ensemble import</text>
+    <text x="-70" y="-5" fill="#64ffda" font-family="Consolas, monospace" font-size="10">RandomForestClassifier</text>
+    <text x="-70" y="10" fill="#ff6b6b" font-family="Consolas, monospace" font-size="10">model = RandomForest(</text>
+    <text x="-70" y="25" fill="#ffffff" font-family="Consolas, monospace" font-size="10">  n_estimators=100</text>
+    <text x="-70" y="40" fill="#ff6b6b" font-family="Consolas, monospace" font-size="10">)</text>
+  </g>
+</svg>

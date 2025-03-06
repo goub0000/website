@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f" stop-opacity="1" />
+      <stop offset="100%" stop-color="#112240" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="powerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="1" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="1" />
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="3" dy="3" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)" />
+  
+  <!-- Decorative Power Grid Elements -->
+  <g opacity="0.1">
+    <path d="M0,100 L800,100 M0,200 L800,200 M0,300 L800,300 M0,400 L800,400" stroke="#64ffda" stroke-width="1" />
+    <path d="M100,0 L100,500 M200,0 L200,500 M300,0 L300,500 M400,0 L400,500 M500,0 L500,500 M600,0 L600,500 M700,0 L700,500" stroke="#64ffda" stroke-width="1" />
+  </g>
+  
+  <!-- Power Lines -->
+  <g opacity="0.6">
+    <path d="M50,150 C100,100 150,200 200,150 C250,100 300,200 350,150 C400,100 450,200 500,150 C550,100 600,200 650,150 C700,100 750,200 800,150" stroke="#64ffda" stroke-width="2" fill="none" />
+    <path d="M50,350 C100,300 150,400 200,350 C250,300 300,400 350,350 C400,300 450,400 500,350 C550,300 600,400 650,350 C700,300 750,400 800,350" stroke="#64ffda" stroke-width="2" fill="none" />
+  </g>
+  
+  <!-- Main Calculator Interface -->
+  <g transform="translate(400, 250)">
+    <!-- Mobile App Frame -->
+    <rect x="-150" y="-250" width="300" height="500" rx="20" ry="20" fill="#334155" filter="url(#shadow)" />
+    <rect x="-140" y="-240" width="280" height="480" rx="15" ry="15" fill="#0f172a" />
+    
+    <!-- Screen -->
+    <rect x="-130" y="-230" width="260" height="120" rx="10" ry="10" fill="url(#screenGradient)" />
+    
+    <!-- Calculator Display -->
+    <g transform="translate(0, -185)">
+      <text x="0" y="0" font-family="Courier New, monospace" font-size="24" fill="#64ffda" text-anchor="middle">MVA: 58.73</text>
+      <rect x="-125" y="15" width="250" height="2" fill="#64ffda" opacity="0.5" />
+      <text x="-120" y="35" font-family="Arial" font-size="14" fill="#94a3b8">Volts: 13.8 kV</text>
+      <text x="70" y="35" font-family="Arial" font-size="14" fill="#94a3b8">Amps: 2.45 kA</text>
+    </g>
+    
+    <!-- Input Fields -->
+    <g transform="translate(0, -90)">
+      <rect x="-120" y="0" width="240" height="40" rx="5" ry="5" fill="#1e293b" />
+      <text x="-110" y="25" font-family="Arial" font-size="16" fill="#e2e8f0">Voltage (kV):</text>
+      <rect x="30" y="10" width="100" height="20" rx="3" ry="3" fill="#334155" />
+      <text x="80" y="25" font-family="Arial" font-size="16" fill="#64ffda" text-anchor="middle">13.8</text>
+      
+      <rect x="-120" y="50" width="240" height="40" rx="5" ry="5" fill="#1e293b" />
+      <text x="-110" y="75" font-family="Arial" font-size="16" fill="#e2e8f0">Current (A):</text>
+      <rect x="30" y="60" width="100" height="20" rx="3" ry="3" fill="#334155" />
+      <text x="80" y="75" font-family="Arial" font-size="16" fill="#64ffda" text-anchor="middle">2450</text>
+      
+      <rect x="-120" y="100" width="240" height="40" rx="5" ry="5" fill="#1e293b" />
+      <text x="-110" y="125" font-family="Arial" font-size="16" fill="#e2e8f0">Power Factor:</text>
+      <rect x="30" y="110" width="100" height="20" rx="3" ry="3" fill="#334155" />
+      <text x="80" y="125" font-family="Arial" font-size="16" fill="#64ffda" text-anchor="middle">0.98</text>
+    </g>
+    
+    <!-- Buttons -->
+    <g transform="translate(0, 100)">
+      <rect x="-120" y="0" width="75" height="40" rx="5" ry="5" fill="#475569" />
+      <text x="-82.5" y="25" font-family="Arial" font-weight="bold" font-size="16" fill="#f8fafc" text-anchor="middle">CLEAR</text>
+      
+      <rect x="-35" y="0" width="75" height="40" rx="5" ry="5" fill="#475569" />
+      <text x="2.5" y="25" font-family="Arial" font-weight="bold" font-size="16" fill="#f8fafc" text-anchor="middle">LOAD</text>
+      
+      <rect x="50" y="0" width="75" height="40" rx="5" ry="5" fill="url(#powerGradient)" />
+      <text x="87.5" y="25" font-family="Arial" font-weight="bold" font-size="16" fill="#f8fafc" text-anchor="middle">CALC</text>
+      
+      <rect x="-120" y="50" width="240" height="40" rx="5" ry="5" fill="#64ffda" />
+      <text x="0" y="75" font-family="Arial" font-weight="bold" font-size="16" fill="#0f172a" text-anchor="middle">SEND TO CONTROL CENTER</text>
+    </g>
+  </g>
+  
+  <!-- PowerApps Logo -->
+  <g transform="translate(90, 90)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="60" fill="#742774" opacity="0.9" />
+    <path d="M-20,-20 L20,-20 L20,20 L-20,20 Z" fill="none" stroke="#ffffff" stroke-width="5" />
+    <text x="0" y="0" font-family="Arial" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">Power</text>
+    <text x="0" y="15" font-family="Arial" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">Apps</text>
+  </g>
+  
+  <!-- Power Transmission Tower -->
+  <g transform="translate(710, 90)" filter="url(#shadow)">
+    <path d="M0,-60 L-30,60 L30,60 Z" fill="none" stroke="#cbd5e1" stroke-width="3" />
+    <path d="M0,-60 L0,60" stroke="#cbd5e1" stroke-width="3" />
+    <path d="M-30,0 L30,0" stroke="#cbd5e1" stroke-width="3" />
+    <path d="M-15,-30 L15,-30" stroke="#cbd5e1" stroke-width="3" />
+    <path d="M-20,30 L20,30" stroke="#cbd5e1" stroke-width="3" />
+    <path d="M-30,60 L30,60" stroke="#cbd5e1" stroke-width="3" />
+  </g>
+  
+  <!-- Transformer Icon -->
+  <g transform="translate(710, 400)" filter="url(#shadow)">
+    <rect x="-30" y="-40" width="60" height="80" rx="5" ry="5" fill="#334155" />
+    <circle cx="0" cy="-15" r="15" fill="none" stroke="#64ffda" stroke-width="2" />
+    <circle cx="0" cy="15" r="15" fill="none" stroke="#64ffda" stroke-width="2" />
+    <path d="M-15,-15 L15,-15 M-15,15 L15,15" stroke="#64ffda" stroke-width="2" />
+  </g>
+  
+  <!-- Bolt of Electricity -->
+  <g transform="translate(100, 400)" filter="url(#glow)">
+    <path d="M0,0 L15,-30 L0,-20 L10,-50" stroke="#64ffda" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  
+  <!-- OGE Text -->
+  <g transform="translate(400, 450)">
+    <text x="0" y="0" font-family="Arial" font-weight="bold" font-size="16" fill="#94a3b8" text-anchor="middle">OGE Energy Corp Field Operations</text>
+  </g>
+</svg>
