@@ -22,6 +22,18 @@
     object-fit: contain;
 }
 
+/* Skills with icons */
+.skills-used span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skills-used span i {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .company-logo {
@@ -35,5 +47,9 @@
     .company-logo {
         width: 45px;
         height: 45px;
+    }
+
+    .skills-used span i {
+        font-size: 10px;
     }
 }
