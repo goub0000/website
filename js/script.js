@@ -104,31 +104,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
-    
+
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // In a real scenario, you would send this data to a server
-            // For now, just show a success message
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
-            
-            // Hide the form after successful submission
-            if (contactToggle) {
-                contactToggle.click();
-            }
+
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                    // Hide the form after successful submission
+                    if (contactToggle) {
+                        contactToggle.click();
+                    }
+                } else {
+                    alert('Oops! Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('Oops! Something went wrong. Please try again.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 
