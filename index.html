@@ -151,18 +151,22 @@
             <h2>Get in Touch</h2>
             <button class="toggle-button" id="contact-toggle">Show Contact Form</button>
             <div id="contact-form-container" class="hidden">
-                <form id="contact-form">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="05545645-c7f0-463c-b022-e0e39ab9b970">
+                    <input type="hidden" name="subject" value="New message from your portfolio website">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <input type="checkbox" name="botcheck" style="display: none;">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" placeholder="Your Message" required></textarea>
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn primary-btn">Send Message</button>
                 </form>
