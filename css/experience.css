@@ -1,0 +1,39 @@
+/* Experience Page - Logo Styles */
+
+/* Override company-logo to display images instead of icons */
+.company-logo {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .company-logo {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-logo {
+        width: 45px;
+        height: 45px;
+    }
+}
