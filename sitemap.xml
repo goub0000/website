@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    SITEMAP.XML - Tells search engines about all pages on your site
+    Submit this to Google Search Console for faster indexing
+    URL: https://search.google.com/search-console
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage - Highest priority -->
+    <url>
+        <loc>https://oumarougouba.com/</loc>
+        <lastmod>2026-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://oumarougouba.com/pages/about.html</loc>
+        <lastmod>2026-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Experience Page - Important for recruiters -->
+    <url>
+        <loc>https://oumarougouba.com/pages/experience.html</loc>
+        <lastmod>2026-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Projects Page -->
+    <url>
+        <loc>https://oumarougouba.com/pages/projects.html</loc>
+        <lastmod>2026-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Courses Page -->
+    <url>
+        <loc>https://oumarougouba.com/pages/courses.html</loc>
+        <lastmod>2026-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

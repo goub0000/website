@@ -1,0 +1,16 @@
+# ROBOTS.TXT - Instructions for search engine crawlers
+# This file tells search engines which pages to index and which to ignore
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Point to sitemap for faster discovery of all pages
+Sitemap: https://oumarougouba.com/sitemap.xml
+
+# Block crawling of non-essential files (optional, improves crawl efficiency)
+Disallow: /sw.js
+Disallow: /manifest.json
+
+# Crawl delay (be nice to servers - optional)
+Crawl-delay: 1

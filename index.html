@@ -1,35 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ==================== ESSENTIAL META TAGS ==================== -->
+    <!-- Character encoding: Ensures special characters display correctly -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oumarou Gouba - Information Science and Technology Major | Systems Operations Engineer</title>
-    <meta name="description" content="Portfolio of Oumarou Gouba, Information Science & Technology student at OU and Systems Operations Engineer at OGE Energy Corp.">
 
-    <!-- Favicon -->
+    <!-- Viewport: Makes site responsive on mobile devices - CRITICAL for mobile SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title: Most important SEO element. Include name + keywords. Keep under 60 characters -->
+    <title>Oumarou Gouba | Goldman Sachs Analyst | Data Analytics & Web Development</title>
+
+    <!-- Meta Description: Appears in Google search results. Include keywords naturally. 150-160 characters ideal -->
+    <meta name="description" content="Oumarou Gouba - Incoming Technology Audit Analyst at Goldman Sachs. Information Science student at University of Oklahoma specializing in data analytics, Python, SQL, and web development.">
+
+    <!-- Keywords: Less important now but still helps. Include relevant skills and job titles -->
+    <meta name="keywords" content="Oumarou Gouba, Goldman Sachs, Technology Audit Analyst, Data Analytics, Python, SQL, Power BI, Tableau, Web Development, University of Oklahoma, Information Science, Business Intelligence">
+
+    <!-- Author: Helps establish content ownership -->
+    <meta name="author" content="Oumarou Gouba">
+
+    <!-- Robots: Tells search engines to index this page and follow all links -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Language: Helps search engines serve your page to the right audience -->
+    <meta name="language" content="English">
+
+    <!-- ==================== CANONICAL URL ==================== -->
+    <!-- Canonical: Prevents duplicate content issues. Points to the "official" URL of this page -->
+    <link rel="canonical" href="https://oumarougouba.com/">
+
+    <!-- ==================== FAVICON & APP ICONS ==================== -->
+    <!-- Favicon: The small icon in browser tabs - improves brand recognition -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
+
+    <!-- Apple Touch Icon: Icon when users save site to iPhone/iPad home screen -->
     <link rel="apple-touch-icon" href="favicon.svg">
 
-    <!-- Open Graph / Social Media -->
+    <!-- PWA Manifest: Enables "Add to Home Screen" and app-like experience -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- ==================== OPEN GRAPH (Facebook, LinkedIn) ==================== -->
+    <!-- These tags control how your site appears when shared on social media -->
+
+    <!-- og:type: Tells social platforms this is a website (not article, video, etc.) -->
     <meta property="og:type" content="website">
+
+    <!-- og:url: The canonical URL of your page -->
     <meta property="og:url" content="https://oumarougouba.com/">
-    <meta property="og:title" content="Oumarou Gouba - Portfolio">
-    <meta property="og:description" content="Incoming Technology Audit Analyst at Goldman Sachs. Information Science & Technology student at OU with expertise in data analytics and web development.">
+
+    <!-- og:title: Title shown in social shares. Can be different from page title -->
+    <meta property="og:title" content="Oumarou Gouba | Goldman Sachs Analyst | Portfolio">
+
+    <!-- og:description: Description in social shares. Compelling call-to-action helps clicks -->
+    <meta property="og:description" content="Incoming Technology Audit Analyst at Goldman Sachs. Explore my projects in data analytics, machine learning, and web development.">
+
+    <!-- og:image: Image shown in social shares. Use high-quality image (1200x630px ideal) -->
     <meta property="og:image" content="https://oumarougouba.com/images/oumarou.jpg">
+
+    <!-- og:image:alt: Accessibility text for the image -->
+    <meta property="og:image:alt" content="Oumarou Gouba - Portfolio">
+
+    <!-- og:site_name: Your brand/site name -->
+    <meta property="og:site_name" content="Oumarou Gouba Portfolio">
+
+    <!-- og:locale: Language and region -->
+    <meta property="og:locale" content="en_US">
+
+    <!-- ==================== TWITTER CARD ==================== -->
+    <!-- Controls how your site appears when shared on Twitter/X -->
+
+    <!-- twitter:card: Use "summary_large_image" for big image preview -->
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Improved fonts with fallbacks -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Updated Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- CSS path -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Theme color for mobile browsers -->
+    <!-- twitter:site: Your Twitter handle (optional) -->
+    <meta name="twitter:site" content="@OumarouGouba6">
+
+    <!-- twitter:creator: Author's Twitter handle -->
+    <meta name="twitter:creator" content="@OumarouGouba6">
+
+    <!-- twitter:title: Title for Twitter shares -->
+    <meta name="twitter:title" content="Oumarou Gouba | Goldman Sachs Analyst">
+
+    <!-- twitter:description: Description for Twitter shares -->
+    <meta name="twitter:description" content="Incoming Technology Audit Analyst at Goldman Sachs. Data analytics, Python, SQL, and web development projects.">
+
+    <!-- twitter:image: Image for Twitter shares -->
+    <meta name="twitter:image" content="https://oumarougouba.com/images/oumarou.jpg">
+
+    <!-- ==================== STRUCTURED DATA (JSON-LD) ==================== -->
+    <!-- Schema.org markup: Helps Google understand your content and show rich results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Oumarou Gouba",
+        "url": "https://oumarougouba.com",
+        "image": "https://oumarougouba.com/images/oumarou.jpg",
+        "jobTitle": "Incoming Technology Audit Analyst",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Goldman Sachs"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Oklahoma"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/oumarou-g-a1030726a/",
+            "https://github.com/OumarouatOU",
+            "https://x.com/OumarouGouba6"
+        ],
+        "knowsAbout": ["Data Analytics", "Python", "SQL", "Power BI", "Tableau", "Web Development", "Machine Learning", "Business Intelligence"]
+    }
+    </script>
+
+    <!-- ==================== MOBILE & BROWSER THEMING ==================== -->
+    <!-- Theme color: Colors the browser's address bar on mobile -->
     <meta name="theme-color" content="#0A192F">
 
-    <!-- Google Analytics -->
+    <!-- Microsoft Tile Color: For Windows pinned sites -->
+    <meta name="msapplication-TileColor" content="#0A192F">
+
+    <!-- Apple Mobile Web App: Enables full-screen mode on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="OG Portfolio">
+
+    <!-- ==================== PERFORMANCE & SECURITY ==================== -->
+    <!-- DNS Prefetch: Speeds up loading of external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+    <!-- Preconnect: Establishes early connections to important origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ==================== STYLESHEETS ==================== -->
+    <!-- Google Fonts: Professional typography improves user experience -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome: Icons for visual appeal and UX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- ==================== GOOGLE ANALYTICS ==================== -->
+    <!-- Tracks visitor behavior, traffic sources, and engagement metrics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0HYV0467Z"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
